@@ -1,0 +1,89 @@
+:root {
+    --bg-color: cornsilk ;
+}
+@keyframes colorchange {
+    from {color: coral;}
+    to {color: #2C5F2D;}
+    to {color: #5D3A1A;}
+    to {color: #800020;}
+    to {color: #006B6B;}
+  }
+@font-face {
+    font-family: custom-font;
+    font-display: swap;
+    src:  url("./Vollkorn/Vollkorn-VariableFont_wght.ttf");
+}
+
+h1{
+    animation: colorchange 5s infinite;
+}
+h2{
+    font-family: custom-font, Sans-Serif , Impact, Serif;
+   
+    color: blue;
+}
+section:hover{
+    border-radius: 200%;
+}
+section{
+    border: solid 1px gold;
+    border-radius: 2px;
+    transition: border-radius 2s;
+}
+#contact-table{  
+    margin-left: auto;
+    margin-right: auto;
+}
+#user-info {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.job-header {
+    flex-direction: column;        /* stack date below title */
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.job-date {
+    align-self: flex-start;
+}
+.skills {
+    min-width: 0;
+    background-color: var(--bg-color);
+    text-align: center
+}
+
+main {
+    background-color: var(--bg-color);
+    text-align: center
+
+}
+
+.resume{
+    border: solid burlywood;
+}
+.img1{
+   text-align: center;
+   padding: 10px;
+   min-width: 0;
+
+}
+#selfintro{
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+aside {
+    background-color: var(--bg-color);
+
+}
+
+.achievement{
+    border: 5px solid cadetblue;
+}
+footer{
+    background-color: greenyellow;
+    margin-right: auto;
+    margin-left: auto;
+}

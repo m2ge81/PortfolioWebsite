@@ -1,0 +1,201 @@
+:root {
+    --bg-color: bisque;
+}
+section {
+  border: 2px solid transparent;   /* invisible border */
+  border-radius: 1rem;
+  box-sizing: border-box;          /* ensures total width/height includes border */
+}
+section:hover{
+    border: solid yellowgreen;
+}
+@keyframes colorchange {
+    from {color: coral;}
+    to {color: #2C5F2D;}
+    to {color: #5D3A1A;}
+    to {color: #800020;}
+    to {color: #006B6B;}
+  }
+@font-face {
+    font-family: custom-font;
+    font-display: swap;
+    src:  url("./Vollkorn/Vollkorn-VariableFont_wght.ttf");
+}
+
+h1{
+    grid-area: header;
+    animation: colorchange 5s infinite;
+}
+h2{
+    font-family: custom-font, Sans-Serif , Impact, Serif;
+   
+    color: #006B6B;
+}
+
+header { 
+        font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        line-height: 1.5;
+        color: #1e293b;
+    }
+        #experience {
+            grid-area: experience;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 2rem;
+        }
+        .job {
+            margin-bottom: 2.5rem;
+        }
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        .job-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .job-date {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f1f5f9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #334155;
+        }
+        ul {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 0.6rem;
+            text-align: justify;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+        .company-note {
+            font-weight: 400;
+            color: #475569;
+            font-size: 1rem;
+            margin-left: 0.25rem;
+        }
+        .bullet-highlight {
+            background: #fef9c3;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem;
+            font-weight: 500;
+        }
+.contact { grid-area: contact; }
+#contact-table{  
+    margin-left: auto;
+    margin-right: auto;
+}
+#skills { 
+    grid-area: skills; 
+    margin-left: auto;
+    margin-right: auto;
+}
+#user-info {
+    grid-area: user-info;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.resume {
+    grid-area: resume;
+    margin-right: 2rem;
+    /* make it stand out */
+    background-color: #e6f7ff;        /* light blue background */
+    border: 2px solid #1890ff;        /* solid blue border */
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: 600;
+    text-align: left;                  /* override centering for readability */
+}
+.resume h3 {
+    font-size: 3.6rem;
+    margin-top: 0;
+    color: #0050b3;
+}
+
+.resume a {
+    display: inline-block;
+    background-color: #1890ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.resume a:hover {
+    background-color: #096dd9;
+}
+.basic-info {
+    display: grid;
+    min-width: 0;
+    grid-template-areas:
+        'header header header header'
+        'contact contact contact contact'
+        'user-info user-info user-info user-info'
+        'skills skills skills skills'
+        'experience experience experience resume';
+    
+    grid-gap: 5px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   /* 5 equal columns */
+  grid-template-areas:
+    'resume resume resume resume'
+    '. img video video';
+  grid-gap: 10px;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.video{
+   grid-area: video;
+   min-width: 0;
+}
+.img1{
+   grid-area: img;
+   text-align: center;
+   padding: 10px;
+   min-width: 0;
+
+}
+aside {
+    display: grid;
+    background-color: var(--bg-color);
+    grid-template-areas:
+    'ibrary library achievement';
+}
+
+#library{
+    grid-area: library;
+}
+
+.achievement{
+    border: 5px solid cadetblue;
+    grid-area: achievement;
+}
+footer{
+    background-color: greenyellow;
+    margin-right: auto;
+    margin-left: auto;
+}
+
